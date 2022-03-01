@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <form action="{% url 'hello:index' %}" method="post">
+      {% csrf_token %}
+      <label name="name-entry">Enter your name:</label>
+      <input type="text" name="name" id="name" />
+      <input type="submit" value="Submit" name="submit" />
+    </form>
+  </body>
+</html>
